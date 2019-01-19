@@ -1,0 +1,26 @@
+{
+  "name": "batman-tv-shows",
+  "version": "0.0.1",
+  "description": "enuygun job application case",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yyalim/batman-tv-shows.git"
+  },
+  "author": "yyalim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yyalim/batman-tv-shows/issues"
+  },
+  "homepage": "https://github.com/yyalim/batman-tv-shows#readme",
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
