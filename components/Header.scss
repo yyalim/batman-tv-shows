@@ -1,0 +1,13 @@
+$orange:	#FFA500;
+
+.navLinkList {
+  display: flex;
+  padding-left: 0px;
+  list-style: none;
+}
+
+.navLink {
+  color: $orange;
+  margin-right: 5px;
+  text-decoration: none;
+}
