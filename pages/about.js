@@ -1,10 +1,10 @@
 import Layout from '../components/Layout'
 import { withRouter } from 'next/router'
 
-const Index = props => (
+const About = ()  => (
   <Layout>
-    <h1>BATMAN TV SHOWS</h1>
+    <h1>ABOUT</h1>
   </Layout>
 )
 
-export default withRouter(Index)
+export default withRouter(About)

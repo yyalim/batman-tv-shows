@@ -4,9 +4,10 @@
   "description": "enuygun job application case",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "heroku-postbuild": "next build",
+    "start": "node server.js -p $PORT"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/yyalim/batman-tv-shows#readme",
   "dependencies": {
+    "express": "^4.16.4",
     "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
