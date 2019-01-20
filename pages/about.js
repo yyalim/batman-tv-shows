@@ -11,8 +11,8 @@ const About = ()  => (
       and first appeared in Detective Comics #27, in 1939.
     </p>
     <p className={styles.quote}>
-      "It's not who I am underneath, but what I do that defines me."<br/>
-      - Batman
+      "Let that be a lesson. In future, be more careful from who you accept free lemonade."<br/>
+      <span className={styles.batman}>- Batman</span>
     </p>
   </Layout>
 )
