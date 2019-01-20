@@ -1,13 +1,24 @@
-$orange:	#FFA500;
+$bat-white:#fff;
+$bat-black:#000;
 
 .navLinkList {
   display: flex;
+  margin: 0;
   padding-left: 0px;
   list-style: none;
 }
 
 .navLink {
-  color: $orange;
-  margin-right: 5px;
+  color: $bat-white;
+  margin: 15px;
   text-decoration: none;
+  font-style: italic;
+  font-size: 32px;
+  font-stretch: 100%;
+  font-variant-caps: normal;
+  font-variant-east-asian:normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 800;
+  text-shadow: 2px 2px $bat-black;
 }

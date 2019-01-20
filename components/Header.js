@@ -17,8 +17,8 @@ const NavLink = ({ href, text }) => (
 
 const Header = () => {
   const navigationLinks = [
-    { href: '/', text: 'Home', key: 'home' },
-    { href: '/about', text: 'About', key: 'about' }
+    { href: '/', text: 'HOME', key: 'home' },
+    { href: '/about', text: 'ABOUT', key: 'about' }
   ]
 
   return (

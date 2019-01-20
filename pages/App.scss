@@ -1,0 +1,32 @@
+$bat-grey: #98a4a6;
+$bat-dark-grey: #484848;
+$bat-yellow: #edc233;
+$bat-blue: #0060A8;
+
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system, -apple-system, ".SFNSDisplay-Regular", HelveticaNeue, Arial;
+  background: $bat-grey;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $bat-blue;
+  height: 60px;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 640px;
+}
