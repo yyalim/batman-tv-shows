@@ -3,17 +3,18 @@ import { handleGetShows } from '../actions/shows'
 import Layout from '../components/Layout'
 import { withRouter } from 'next/router'
 import { Link } from '../routes'
+import styles from './index.scss'
 
-const DetailsLinkList = ({ children }) => (
-  <ul>
+const ShowLinkList = ({ children }) => (
+  <ul className={styles.showLinkList}>
     {children}
   </ul>
 )
 
-const DetailsLink = ({ show }) => (
-  <li>
+const ShowLink = ({ show }) => (
+  <li className={styles.showLinkItem}>
     <Link route="details" params={{ id: show.id }}>
-      <a>{show.name}</a>
+      <a className={styles.showLink}>{show.name}</a>
     </Link>
   </li>
 )
@@ -21,9 +22,9 @@ const DetailsLink = ({ show }) => (
 const Index = ({ showIds, shows }) => (
   <Layout>
     <h1>BATMAN TV SHOWS</h1>
-    <DetailsLinkList>
-      {showIds.map(id => <DetailsLink key={id} show={shows[id].show}/>)}
-    </DetailsLinkList>
+    <ShowLinkList>
+      {showIds.map(id => <ShowLink key={id} show={shows[id].show}/>)}
+    </ShowLinkList>
   </Layout>
 )
 

@@ -1,0 +1,17 @@
+@import '../styles/colors';
+
+.showLinkList {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.showLinkItem {
+  margin: 5px;
+}
+
+.showLink {
+  font-size: 22px;
+  font-style: italic;
+  color: $bat-white;
+}

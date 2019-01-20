@@ -1,5 +1,5 @@
-$bat-white:#fff;
-$bat-black:#000;
+@import '../styles/colors';
+@import '../styles/sizes';
 
 .navLinkList {
   display: flex;
@@ -9,7 +9,7 @@ $bat-black:#000;
 }
 
 .navLink {
-  color: $bat-white;
+  color: $bat-yellow;
   margin: 15px;
   text-decoration: none;
   font-style: italic;

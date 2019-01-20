@@ -1,8 +1,5 @@
-$bat-grey: #98a4a6;
-$bat-dark-grey: #484848;
-$bat-yellow: #edc233;
-$bat-blue: #0060A8;
-
+@import 'colors';
+@import 'sizes';
 
 *,
 *:before,
@@ -28,5 +25,15 @@ header {
 
 main {
   margin: 0 auto;
-  max-width: 640px;
+  max-width: $desktop-size;
+}
+
+h1 {
+  color: $bat-white;
+  text-shadow: 2px 2px $bat-black;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
 }
