@@ -2,11 +2,11 @@ import { connect } from 'react-redux'
 import { handleGetShows } from '../actions/shows'
 import Layout from '../components/Layout'
 import { withRouter } from 'next/router'
-import Link from 'next/link'
+import { Link } from '../routes'
 
 const ShowLinkList = ({ show }) => (
   <li>
-    <Link href={`/details/${show.id}`}>
+    <Link route="details" params={{ id: show.id }}>
       <a>{show.name}</a>
     </Link>
   </li>

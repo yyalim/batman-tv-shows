@@ -1,5 +1,6 @@
 const express = require('express');
 const next = require('next');
+const routes = require('./routes')
 const path = require('path');
 const url = require('url');
 const cluster = require('cluster');
@@ -23,7 +24,7 @@ if (!dev && cluster.isMaster) {
 
 } else {
   const nextApp = next({ dir: '.', dev });
-  const nextHandler = nextApp.getRequestHandler();
+  const nextHandler = routes.getRequestHandler(nextApp);
 
   nextApp.prepare()
     .then(() => {
@@ -43,19 +44,19 @@ if (!dev && cluster.isMaster) {
         });
       }
 
-      server.get('/details/:id', (req, res) => {
-        const actualPage = '/details'
-        const queryParams = { id: req.params.id }
-        nextApp.render(req, res, actualPage, queryParams)
-      })
+      // server.get('/details/:id', (req, res) => {
+      //   const actualPage = '/details'
+      //   const queryParams = { id: req.params.id }
+      //   nextApp.render(req, res, actualPage, queryParams)
+      // })
 
-      // Default catch-all renders Next app
-      server.get('*', (req, res) => {
-        const parsedUrl = url.parse(req.url, true);
-        nextHandler(req, res, parsedUrl);
-      });
+      // // Default catch-all renders Next app
+      // server.get('*', (req, res) => {
+      //   const parsedUrl = url.parse(req.url, true);
+      //   nextHandler(req, res, parsedUrl);
+      // });
 
-      server.listen(port, (err) => {
+      server.use(nextHandler).listen(port, (err) => {
         if (err) throw err;
         console.log(`Listening on http://localhost:${port}`);
       });
